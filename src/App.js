@@ -1,9 +1,19 @@
 import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
+import Home from './pages/Home'
+import SingleLeagueDetails from './pages/SingleLeagueDetails'
 
 function App() {
   return (
-   <h2>hello world</h2>
+   <Router>
+     <Switch>
+       <Route exact path="/">
+        <Home/>
+       </Route>
+        <Route exact path='/:id' children={<SingleLeagueDetails/>}/>
+     </Switch>
+   </Router>
   );
 }
 
