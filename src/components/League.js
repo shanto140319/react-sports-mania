@@ -13,7 +13,7 @@ const League = ({id,img,name}) => {
    <div className="content">
     <h4>{name}</h4>
     <p>Sports Type : Football</p>
-    <Link to='/:id'><button className='btn' onClick={()=>handleClick(id)}>Explore</button></Link>
+    <Link to={`/${id}`}><button className='btn'>Explore</button></Link>
    </div>
   </div>
  )

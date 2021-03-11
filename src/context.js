@@ -9,7 +9,7 @@ const AppProvider = ({ children }) => {
   const[leagues,setLeagues] = useState([]);
   const [loading,setLoading] = useState(true)
 
-  const url = 'https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=';
+ 
   
 
   const fetchLeagues = async(url)=>{
@@ -20,12 +20,9 @@ const AppProvider = ({ children }) => {
     const leagues = data.leagues
     setLeagues(leagues)
   }
-  const handleClick =(id)=>{
-    const main_url = `${url}${id}`;
-    fetchLeagues(main_url)
-  }
+ 
 
-  return <AppContext.Provider value={{leagues,loading,handleClick}}>{children}</AppContext.Provider>
+  return <AppContext.Provider value={{leagues,loading,fetchLeagues}}>{children}</AppContext.Provider>
 }
 // make sure use
 export const useGlobalContext = () => {

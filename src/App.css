@@ -24,6 +24,12 @@
   width: 100%;
   opacity: 0.5;
 }
+.hero img {
+  z-index: 999;
+  max-width: 300px;
+  max-height: 200px;
+  object-fit: cover;
+}
 .hero h2 {
   color: aliceblue;
   z-index: 999;
@@ -88,8 +94,57 @@
   background-color: blueviolet;
 }
 
+/* single page  */
+.main-content {
+  background-color: #222;
+  padding: 2rem;
+  color: #fff;
+}
+.league-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: blueviolet;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+.league-info h4 {
+  margin-top: 5px;
+  letter-spacing: 3px;
+}
+.league-info h2 {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.right img {
+  max-height: 300px;
+  max-width: 350px;
+  object-fit: cover;
+  margin: 2rem auto;
+}
+
+/* icons */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.icon img {
+  max-height: 50px;
+  max-width: 50px;
+  margin-right: 2rem;
+  transition: 0.3s ease;
+}
+.icon img:hover {
+  transform: scale(1.2);
+}
 @media only screen and (min-width: 900px) {
   .leagues {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .main-content {
+    padding: 2rem 5rem;
   }
 }
